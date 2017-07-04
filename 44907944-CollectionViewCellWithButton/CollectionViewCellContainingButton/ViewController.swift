@@ -53,7 +53,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     // MARK: - Updating the Label
     
-    @objc func updateLabel(_ sender:UIButton)
+    @objc func updateLabel(_ sender:Any?)
     {
         guard let button = sender as? UIButton else
         {
