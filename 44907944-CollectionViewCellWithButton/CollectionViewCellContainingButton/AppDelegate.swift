@@ -16,6 +16,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        // Uncomment this line for nib-based version of the sample. 
+        // The storyboard version is loaded by default.
+        // See the bottom of this file for the implementation.
+        // self.loadFromNib()
+        
         return true
     }
 
@@ -41,6 +47,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+    // MARK: - Loading From a Nib
+    
+    func loadFromNib()
+    {
+        let nibBasedViewController = NibViewController()
+        
+        if self.window == nil
+        {
+            self.window = UIWindow(frame: UIScreen.main.bounds)
+        }
+        
+        guard let window = self.window else
+        {
+            print("No window and failed to instantiate our own.")
+            return
+        }
+        
+        window.addSubview(nibBasedViewController.view)
+        window.rootViewController = nibBasedViewController
+    }
 
 }
 
