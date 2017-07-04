@@ -26,7 +26,6 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
 
     // MARK: - UICollectionViewDataSource
     
-    
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
@@ -45,7 +44,6 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     }
     
     // MARK: - UICollectionViewDelegate
-    
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
