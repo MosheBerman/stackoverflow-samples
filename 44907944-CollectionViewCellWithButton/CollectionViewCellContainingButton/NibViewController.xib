@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NibViewController" customModule="CollectionViewCellContainingButton" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionView" destination="7DW-pd-mUb" id="m2k-rX-Ad6"/>
+                <outlet property="lastTappedLabel" destination="9o8-v3-MkM" id="tlN-Ku-4Tm"/>
+                <outlet property="view" destination="d58-O0-yrA" id="gBo-Ac-hbc"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="d58-O0-yrA">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap a cell to change this text" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9o8-v3-MkM">
+                    <rect key="frame" x="0.0" y="26" width="375" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="7DW-pd-mUb">
+                    <rect key="frame" x="0.0" y="47" width="375" height="620"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="IDa-WE-6Bl">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="njl-Cc-5hk"/>
+                        <outlet property="delegate" destination="-1" id="acW-jb-g5t"/>
+                    </connections>
+                </collectionView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="9o8-v3-MkM" firstAttribute="top" secondItem="d58-O0-yrA" secondAttribute="top" constant="26" id="2H6-XV-An4"/>
+                <constraint firstAttribute="bottom" secondItem="7DW-pd-mUb" secondAttribute="bottom" id="5pt-vh-dY5"/>
+                <constraint firstItem="7DW-pd-mUb" firstAttribute="centerX" secondItem="d58-O0-yrA" secondAttribute="centerX" id="Zt3-bQ-oV6"/>
+                <constraint firstItem="7DW-pd-mUb" firstAttribute="width" secondItem="d58-O0-yrA" secondAttribute="width" id="aii-O6-A8M"/>
+                <constraint firstItem="9o8-v3-MkM" firstAttribute="width" secondItem="d58-O0-yrA" secondAttribute="width" id="oIg-Bw-0LN"/>
+                <constraint firstItem="9o8-v3-MkM" firstAttribute="centerX" secondItem="d58-O0-yrA" secondAttribute="centerX" id="thr-nj-Joy"/>
+                <constraint firstItem="7DW-pd-mUb" firstAttribute="top" secondItem="9o8-v3-MkM" secondAttribute="bottom" id="xTr-hE-vLG"/>
+            </constraints>
+            <point key="canvasLocation" x="34" y="12"/>
+        </view>
+    </objects>
+</document>
