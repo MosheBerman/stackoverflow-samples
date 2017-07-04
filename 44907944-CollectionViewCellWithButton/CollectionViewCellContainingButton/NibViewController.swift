@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NibViewController: UIViewController {
+class NibViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
 
     @IBOutlet weak var lastTappedLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
@@ -49,7 +49,7 @@ class NibViewController: UIViewController {
         
         let nib = UINib(nibName: "CustomCollectionViewCell", bundle: Bundle.main) 
         
-        collectionView.register(nib, forCellWithReuseIdentifier: "com.mosheberman.sample.cell")
+        collectionView.register(nib, forCellWithReuseIdentifier: "com.mosheberman.samples.cell")
     }
     
     // MARK: - UICollectionViewDataSource
@@ -75,6 +75,12 @@ class NibViewController: UIViewController {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
+    }
+    
+    // MARK: - UICollectionViewDelegateFlowLayout
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 100, height: 96)
     }
     
     // MARK: - Updating the Label
