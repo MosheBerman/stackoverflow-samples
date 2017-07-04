@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Lwg-ZK-lrC">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="H9k-iR-fcl">
+            <objects>
+                <viewController id="Lwg-ZK-lrC" customClass="ViewController" customModule="CollectionViewCellContainingButton" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jtK-oN-eQk"/>
+                        <viewControllerLayoutGuide type="bottom" id="Qpe-Kn-xr6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eJz-Z9-WvR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" prefetchingEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JVn-mf-hV5">
+                                <rect key="frame" x="-0.5" y="57" width="375" height="610"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ddL-5D-YE7">
+                                    <size key="itemSize" width="100" height="96"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="com.mosheberman.samples.cell" id="eqt-tD-aas" customClass="CustomCollectionViewCell" customModule="CollectionViewCellContainingButton" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="96"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="96"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oI5-z9-uN1">
+                                                    <rect key="frame" x="8" y="33" width="84" height="30"/>
+                                                    <state key="normal" title="Update Text"/>
+                                                </button>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="oI5-z9-uN1" firstAttribute="centerX" secondItem="eqt-tD-aas" secondAttribute="centerX" id="iIh-K6-BZ3"/>
+                                            <constraint firstItem="oI5-z9-uN1" firstAttribute="centerY" secondItem="eqt-tD-aas" secondAttribute="centerY" id="tIL-Xm-tby"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="updateButton" destination="oI5-z9-uN1" id="9JJ-XY-ba1"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="Lwg-ZK-lrC" id="doe-ez-fA2"/>
+                                    <outlet property="delegate" destination="Lwg-ZK-lrC" id="3EV-Nb-AtO"/>
+                                </connections>
+                            </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap a cell to change this text." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DYr-Ud-ZHt">
+                                <rect key="frame" x="0.0" y="20" width="375" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Htf-3M-eGG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="highlightedColor" cocoaTouchSystemColor="darkTextColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="DYr-Ud-ZHt" firstAttribute="centerX" secondItem="eJz-Z9-WvR" secondAttribute="centerX" id="19r-5Z-Icv"/>
+                            <constraint firstItem="JVn-mf-hV5" firstAttribute="centerX" secondItem="eJz-Z9-WvR" secondAttribute="centerX" id="6Mi-Ls-9MS"/>
+                            <constraint firstItem="JVn-mf-hV5" firstAttribute="top" secondItem="DYr-Ud-ZHt" secondAttribute="bottom" constant="16" id="CTB-R4-dbO"/>
+                            <constraint firstItem="DYr-Ud-ZHt" firstAttribute="width" secondItem="eJz-Z9-WvR" secondAttribute="width" id="QQ6-m1-QRd"/>
+                            <constraint firstItem="JVn-mf-hV5" firstAttribute="width" secondItem="eJz-Z9-WvR" secondAttribute="width" id="cys-YW-H6U"/>
+                            <constraint firstItem="Qpe-Kn-xr6" firstAttribute="top" secondItem="JVn-mf-hV5" secondAttribute="bottom" id="uLH-Cc-ZHk"/>
+                            <constraint firstItem="DYr-Ud-ZHt" firstAttribute="top" secondItem="jtK-oN-eQk" secondAttribute="bottom" id="z2T-yg-2bH"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="JVn-mf-hV5" id="31k-4T-a49"/>
+                        <outlet property="lastTappedLabel" destination="DYr-Ud-ZHt" id="bHW-ty-mbO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KrK-OF-FsK" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="137.18140929535232"/>
+        </scene>
+    </scenes>
+</document>
